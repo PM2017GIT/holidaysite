@@ -1,0 +1,25 @@
+//So könnte eine Funktion aussehen, die fehlende Tage zum jeweiligen Datum berechnet
+function init(){
+
+	var today = Date.now()
+
+var holidayArr = document.querySelectorAll(".holiday");
+for (var i = 0; i < holidayArr.length; i++) {
+	let holidayEl = holidayArr[i];
+	let holidayName =  encodeURI(holidayEl.innerHTML.substr(holidayEl.innerHTML.indexOf("/") + 7));
+	console.log(holidayName);
+	let dateArr = holidayEl.querySelector(".date").innerHTML.split(".");
+	let date = new Date("20"+dateArr[2], dateArr[1]-1, dateArr[0]);
+
+
+	holidayEl.addEventListener("click", function() {
+		result = Math.floor((date - today)/(1000*60*60*24));
+;		console.log(result)
+		if (result >= 0){
+			alert("Noch " + result + " Tage bis " + decodeURI(holidayName) + ".");
+		}else{
+			alert(decodeURI(holidayName) + " war vor " + Math.abs(result) + " Tagen."); 
+		}
+	});
+};
+}
