@@ -1,0 +1,49 @@
+body{
+	font-family: helvetica;
+	background-color: white;
+	overflow: auto;
+
+}
+
+#container{
+	width: 80%;
+	height: 100%;
+	min-height: 100%;
+	background-color: grey;
+	margin: 0px auto;
+	overflow: auto;
+	border-radius: 20px;
+}
+
+h1{
+	padding-top: 0px;
+	margin: 0px;
+	color: white;
+	font-size: 6em;
+	text-align: center;
+	border-bottom: solid 2px black;
+}
+
+#hcontainer{
+	height: 100%;
+	background-color: grey;
+	margin: auto;
+	overflow: auto;
+	padding: 
+
+}
+
+.holiday{
+	background-color: white;
+	border-radius: 25px;
+	padding: 2px;
+	margin-left: 30px;
+	margin-right: 30px;
+	text-align: center;
+	border: 2px solid slategrey;
+
+}
+
+.holiday:hover{
+	border: 2px solid blue;
+}
